@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example - Tienda Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .navbar .search-bar {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .navbar .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+        .button {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Example</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+        </div>
+        <div class="nav-links">
+            <a href="#">Mujer</a>
+            <a href="#">Hombre</a>
+            <a href="#">Niños</a>
+            <a href="#">Carrito</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product">
+            <img src="img/1.jpg" alt="Producto 1">
+            <p>Producto 1</p>
+            <button class="button">Comprar</button>
+        </div>
+        <div class="product">
+            <img src="img/2.jpg" alt="Producto 2">
+            <p>Producto 2</p>
+            <button class="button">Comprar</button>
+        </div>
+        <div class="product">
+            <img src="img/3.jpg" alt="Producto 3">
+            <p>Producto 3</p>
+            <button class="button">Comprar</button>
+        </div>
+        <div class="product">
+            <img src="img/4.jpg" alt="Producto 4">
+            <p>Producto 4</p>
+            <button class="button">Comprar</button>
+        </div>
+        <div class="product">
+            <img src="img/5.jpg" alt="Producto 5">
+            <p>Producto 5</p>
+            <button class="button">Comprar</button>
+        </div>
+        <div class="product">
+            <img src="img/6.jpg" alt="Producto 6">
+            <p>Producto 6</p>
+            <button class="button">Comprar</button>
+        </div>
+    </div>
+</body>
+</html>
