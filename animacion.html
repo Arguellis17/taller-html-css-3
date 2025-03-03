@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Animaciones y Transiciones</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            border-radius: 10px;
+            transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+        .box:hover {
+            transform: scale(1.2);
+            background-color: #e74c3c;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .box:active {
+            animation: spin 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Pasa el mouse sobre mí</div>
+</body>
+</html>
