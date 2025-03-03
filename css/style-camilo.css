@@ -1,0 +1,136 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Variables de colores y fuentes */
+:root {
+    --main-color: #333;
+    --secondary-color: #ff0000;
+    --accent-color: #09ff00;
+    --background-color: #f4f4f4;
+    --header-bg-color: #333;
+    --header-text-color: #fff;
+    --footer-bg-color: #333;
+    --footer-text-color: #fff;
+    --card-bg-color: #fff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos base */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--main-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Diseño Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Efectos avanzados */
+.card:nth-child(1) {
+    /* Box Shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:nth-child(2) {
+    /* Text Shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card:nth-child(3) {
+    /* Filter */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.card:nth-child(3):hover {
+    filter: grayscale(0%);
+}
+
+.card:nth-child(4) {
+    /* Clip-Path */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    transition: clip-path 0.3s ease;
+}
+
+.card:nth-child(4):hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.grid-container {
+    animation: fadeIn 1s ease-in-out;
+}
